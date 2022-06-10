@@ -1,4 +1,6 @@
 :root {
+    font-size: 90%;
+
     --bg-color: #4f4f4f;
     --text-color: white;
     --icon-color: blue;
@@ -14,7 +16,7 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-size: 1.75em;
+    font-size: 1.75rem;
 }
 
 img {
@@ -29,14 +31,38 @@ nav {
     
     display: flex;
     flex-flow: column nowrap;
-    gap: 3rem;
+    gap: 5rem;
 
     width: fit-content;
-    padding: 2rem 1rem 3rem 2rem;
+    min-height: 100vh;
+    padding: 1rem 2rem 1rem 2rem;
 }
 
 li {
     list-style-type: none;
+
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+}
+
+li img {
+    margin-right: 1.5rem;
+}
+
+ul {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.25rem;
+}
+
+ul.logo img {
+    height: 4rem;
+    width: 4rem;
+}
+
+ul.logo li {
+    font-size: 2.5rem;
 }
 
 
