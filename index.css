@@ -1,3 +1,9 @@
+:root {
+    --bg-color: #4f4f4f;
+    --text-color: white;
+    --icon-color: blue;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +12,31 @@
 }
 
 body {
-    background-color: black;
-    color: antiquewhite;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     font-size: 1.75em;
+}
+
+img {
+    height: 2.5rem;
+    width: 2.5rem;
+
+    color: aliceblue;
+}
+
+nav {
+    background-color: black;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3rem;
+
+    width: fit-content;
+    padding: 2rem 1rem 3rem 2rem;
+}
+
+li {
+    list-style-type: none;
 }
 
 
