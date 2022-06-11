@@ -13,20 +13,37 @@
     box-sizing: border-box;
 }
 
+/* Grid CSS -- START */
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-size: 1.75rem;
+
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr 4fr;
 }
 
-img {
-    height: 2.5rem;
-    width: 2.5rem;
+header {
+    background-color: rgb(108, 107, 107);
+    height: 100%;
+    width: 100%;
+}
 
-    color: aliceblue;
+main {
+    background-color: rgb(67, 65, 65);
+    height: 100%;
+    width: 100%;
+    
+    grid-column: 2;
+    grid-row: 2 / 3;
 }
 
 nav {
+
+    grid-column: auto;
+    grid-row: 1 / 3;
+
     background-color: black;
     
     display: flex;
@@ -36,6 +53,17 @@ nav {
     width: fit-content;
     min-height: 100vh;
     padding: 1rem 2rem 1rem 2rem;
+
+
+}
+
+
+/* Grid CSS -- END */
+img {
+    height: 2.5rem;
+    width: 2.5rem;
+
+    color: aliceblue;
 }
 
 li {
