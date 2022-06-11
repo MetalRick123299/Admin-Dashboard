@@ -125,4 +125,21 @@ ul.logo li {
     font-size: 2.5rem;
 }
 
+/* MAIN - Content Containers -- START */
+.projects-container {
+    display: flex;
+
+}
+
+.announcements-container {
+    display: flex;
+
+}
+
+.trending-container {
+    display: flex;
+    
+}
+/* MAIN - Content Containers -- END */
+
 
