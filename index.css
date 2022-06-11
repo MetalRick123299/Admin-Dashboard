@@ -196,17 +196,18 @@ ul.logo li {
     .profile-corner img {
         cursor: pointer;
     }
-
+    
     .profile-corner > * {
         margin: 0 1rem 0 1rem;
     }
-
-.profile-welcome{
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 1fr;
-
-    padding-left: 3rem;
+    
+    .profile-welcome{
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: 1fr 1fr;
+        
+        padding-left: 3rem;
+        margin-bottom: 1rem;
 }
     .profile-welcome img {
         grid-row: 1 / span 2;
@@ -239,7 +240,7 @@ ul.logo li {
 }
     .buttons button {
         height: 2.5rem;
-        width: 10rem;
+        min-width: 10rem;
         border-radius: 99rem;
         border: none;
 
