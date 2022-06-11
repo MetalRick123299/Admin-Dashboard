@@ -13,7 +13,7 @@
     box-sizing: border-box;
 }
 
-/* Grid CSS -- START */
+/* Body - CSS Grid -- START */
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -21,23 +21,55 @@ body {
 
     display: grid;
     grid-template-columns: 1fr 6fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
 }
 
 header {
     background-color: rgb(108, 107, 107);
     height: 100%;
     width: 100%;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1.5fr;
+
+    grid-column: 2;
+    grid-row: 1 / 2;
+
 }
+/* HEADER - CSS Grid -- START */
+    header > * {
+        height: 100%;
+        width: 100%;
+        border: 1px solid white;
+    }
+/* HEADER - CSS Grid -- END */
+
 
 main {
     background-color: rgb(67, 65, 65);
     height: 100%;
     width: 100%;
-    
+      
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
     grid-column: 2;
     grid-row: 2 / 3;
 }
+/* MAIN - CSS Grid -- START */
+    main > * {
+        height: 100%;
+        width: 100%;
+        border: 1px solid white;
+    }
+
+    main .projects {
+        grid-row: 1 / span 2;
+    }
+/* MAIN - CSS Grid -- END */
+
 
 nav {
 
@@ -50,7 +82,7 @@ nav {
     flex-flow: column nowrap;
     gap: 5rem;
 
-    width: fit-content;
+    /* width: fit-content; */
     min-height: 100vh;
     padding: 1rem 2rem 1rem 2rem;
 
@@ -58,7 +90,7 @@ nav {
 }
 
 
-/* Grid CSS -- END */
+/* BODY - CSS Grid END */
 img {
     height: 2.5rem;
     width: 2.5rem;
