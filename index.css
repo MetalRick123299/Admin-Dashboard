@@ -11,17 +11,21 @@
     padding: 0;
     
     box-sizing: border-box;
+
+    /* border: 1px solid red; */
 }
 
 /* Body - CSS Grid -- START */
 body {
-    background-color: var(--bg-color);
+    background-color: blue;
     color: var(--text-color);
     font-size: 1.75rem;
 
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 1fr 7fr;
     grid-template-rows: 1fr 5fr;
+
+
 }
 
 header {
@@ -52,7 +56,7 @@ main {
     width: 100%;
       
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
 
     grid-column: 2;
@@ -62,7 +66,7 @@ main {
     main > * {
         height: 100%;
         width: 100%;
-        border: 1px solid white;
+        /* border: 1px solid white; */
     }
 
     main .projects {
@@ -83,7 +87,7 @@ nav {
     gap: 5rem;
 
     /* width: fit-content; */
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding: 1rem 2rem 1rem 2rem;
 
 
@@ -139,22 +143,6 @@ ul.logo li {
     font-size: 2.5rem;
 }
 
-/* MAIN - Content Containers -- START */
-.projects-container {
-    display: flex;
-
-}
-
-.announcements-container {
-    display: flex;
-
-}
-
-.trending-container {
-    display: flex;
-    
-}
-/* MAIN - Content Containers -- END */
 
 /* HEADER - Content Containers -- START */
 
@@ -162,90 +150,221 @@ ul.logo li {
     display: flex;
     justify-content: start;
     align-items: center;
-
+    
     padding-left: 2rem;
-
+    
     grid-column: span 2;
 }
 
-    .search-bar img {
-        cursor: pointer;
-    }
+.search-bar img {
+    cursor: pointer;
+}
 
-    .search-bar input {
-        margin-left: 1rem;
-        border-radius: 99rem;
-        border: none;
-        outline: none;
-
-        height: 2rem;
-        width: 100%;
-        margin-right: 10rem;
-        padding-left: 1rem;
-
-        transition: all 0.2s;
-
-    }
+.search-bar input {
+    margin-left: 1rem;
+    border-radius: 99rem;
+    border: none;
+    outline: none;
+    
+    height: 2rem;
+    width: 100%;
+    margin-right: 10rem;
+    padding-left: 1rem;
+    
+    transition: all 0.2s;
+    
+}
 
 .profile-corner{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
-    .profile-corner img {
-        cursor: pointer;
-    }
-    
-    .profile-corner > * {
-        margin: 0 1rem 0 1rem;
-    }
-    
-    .profile-welcome{
-        display: grid;
-        grid-template-columns: 1fr 5fr;
-        grid-template-rows: 1fr 1fr;
-        
-        padding-left: 3rem;
-        margin-bottom: 1rem;
+.profile-corner img {
+    cursor: pointer;
 }
-    .profile-welcome img {
-        grid-row: 1 / span 2;
-        justify-self: center;
-        align-self: center;
 
-        height: 7rem;
-        width: 7rem;
-        padding: 0.5rem;
-        margin-right: 1rem;
-    }
+.profile-corner > * {
+    margin: 0 1rem 0 1rem;
+}
 
-    .profile-welcome span {
-        justify-self: start;
-        align-self: end;
+.profile-welcome{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr;
+    
+    padding-left: 3rem;
+    /* margin-bottom: 1rem; */
+}
+.profile-welcome img {
+    grid-row: 1 / span 2;
+    justify-self: center;
+    align-self: center;
+    
+    height: 7rem;
+    width: 7rem;
+    padding: 0.5rem;
+    margin-right: 1rem;
+}
 
-        font-size: 67%;
-        margin-bottom: 0.25rem;
-    }
+.profile-welcome span {
+    justify-self: start;
+    align-self: end;
+    
+    font-size: 67%;
+    margin-bottom: 0.25rem;
+}
+
+.profile-welcome strong {
+    margin: 0;
+    padding: 0;
+}
 
 .buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: end;
     align-items: center;
-
+    
     grid-column: span 2;
-
-    padding-left: 20rem;
-    padding-right: 15rem;
+    
+    padding-right: 5rem;
 }
-    .buttons button {
-        height: 2.5rem;
-        min-width: 10rem;
-        border-radius: 99rem;
-        border: none;
-
-        cursor: pointer;
-    }
+.buttons button {
+    height: 2.5rem;
+    min-width: 10rem;
+    border-radius: 99rem;
+    border: none;
+    
+    margin-left: 5rem;
+    
+    cursor: pointer;
+}
 
 /* HEADER - Content Containers -- END */
 
+/* MAIN - Content Containers -- START */
+h2 {
+    margin: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+.projects-container {
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: space-evenly;
+
+    font-size: 90%;
+
+    margin-top: 0.5rem;
+
+
+}
+    .projects-container p {
+        font-size: smaller;
+        padding: 0.5rem;
+    }
+    .projects-container strong {
+        font-size: larger;
+    }
+
+    .card-container {
+        background-color: #4f4f4f;
+        display: flex;
+        flex-flow: column wrap;
+
+        max-width: 40%;
+        padding: 1rem;
+        margin: 1rem 2rem 1rem 2rem;
+
+        /* height: 150px;
+        width: 300px; */
+        border-radius: 1rem;
+        border-left: 1rem solid red;
+    }
+
+    .project-buttons {
+        display: flex;
+        justify-content: space-evenly;
+
+        cursor: pointer;
+
+    }
+
+.announcements-container, .trending-container {
+    display: flex;
+    background-color: #666363;
+    flex-flow: column nowrap;
+    border-radius: 1rem;
+    border: 1px solid white;
+    font-size: 75%;
+    margin: 1rem 3rem 1rem 3rem;
+}
+
+    .announcements-container p {
+        font-size: smaller;
+        padding: 0.5rem;
+    }
+    .announcements-container strong {
+        font-size: larger;
+    }
+
+    .a-card-container {
+        margin: 1rem;
+        margin-bottom: 0;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgb(67, 65, 65);
+    }
+
+
+.trending-container {
+    display: flex;
+}
+
+.t-card-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 10px;
+
+    padding: 0.5rem;
+}
+
+.t-card-container img {
+    border-radius: 50%;
+}
+
+/* MAIN - Content Containers -- END */
+
+/* .profile-welcome{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr;
+    
+    padding-left: 3rem;
+    /* margin-bottom: 1rem; */
+
+/* .profile-welcome img 
+    grid-row: 1 / span 2;
+    justify-self: center;
+    align-self: center;
+    
+    height: 7rem;
+    width: 7rem;
+    padding: 0.5rem;
+    margin-right: 1rem;
+
+
+.profile-welcome span 
+    justify-self: start;
+    align-self: end;
+    
+    font-size: 67%;
+    margin-bottom: 0.25rem;
+
+
+.profile-welcome strong 
+    margin: 0;
+    padding: 0;
+ */ 
